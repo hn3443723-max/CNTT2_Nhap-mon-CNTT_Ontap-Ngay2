@@ -10,9 +10,8 @@
 ###  Các dòng lệnh đã chạy 
 
 ```
-PS C:\Users\ACER\Documents\Downloads\starter-kit(1)\starter-kit\trung-tam-tieng-anh> Get-Content .\logs\access.log | Select-String "ERROR" > .\logs\error_report.txt
-PS C:\Users\ACER\Documents\Downloads\starter-kit(1)\starter-kit\trung-tam-tieng-anh> Get-Content .\logs\error_report.txt
-PS C:\Users\ACER\Documents\Downloads\starter-kit(1)\starter-kit\trung-tam-tieng-anh> Get-Content .\logs\error_report.txt | Select-Object -First 2
+Get-Content .\logs\access.log | Select-String "ERROR" | Out-File .\logs\error_report.txt -Encoding utf8
+Get-Content .\logs\error_report.txt
 ```
 
 ### 2 dòng lỗi đầu tiên trong error_report.txt
@@ -27,8 +26,9 @@ PS C:\Users\ACER\Documents\Downloads\starter-kit(1)\starter-kit\trung-tam-tieng-
 ### Lệnh
 
 ```
-PS C:\Users\ACER\Documents\Downloads\starter-kit(1)\starter-kit\trung-tam-tieng-anh> \Get-Content .\logs\access.log | Select-String "WARNING" | Measure-Object | Select-Object -ExpandProperty Count
-PS C:\Users\ACER\Documents\Downloads\starter-kit(1)\starter-kit\trung-tam-tieng-anh> Get-Content .\logs\payment.log | Select-String "ERROR" | Measure-Object | Select-Object -ExpandProperty Count
+Get-Content .\logs\access.log | Select-String "WARNING" | Measure-Object -Line
+Get-Content .\logs\payment.log | Select-String "ERROR" | Measure-Object -Line
+
 ```
 
 ### Kết quả đếm (Windows: giá trị Count; macOS: con số in ra)
@@ -81,7 +81,7 @@ ERROR trong payment.log: 3
 
 ## Bài 5. Câu hỏi ngắn
 
-- **a) > ghi đè nội dung cũ, còn >> ghi nối tiếp vào cuối tệp.**
+- **a) Toán tử ">" ghi đè nội dung vào file,nếu như file bên trong đã có dữ liệu thì nó sẽ xóa hết dữ liệu cũ và ghi dữ liệu mới,còn toán tử ">>" ghi nối tiếp vào cuối tệp.**
 - **b) Thay >> bằng > sẽ làm mất nội dung cũ và tiêu đề. Nếu vẫn dùng >> ở lệnh thứ ba, kết quả WARNING sẽ được nối vào cuối tệp.**
 - **c) Nên dùng đường dẫn tương đối như .\logs\Payment.log để dễ di chuyển dự án giữa các máy. Đường dẫn tuyệt đối phụ thuộc vào vị trí lưu trữ và tài khoản máy tính.**
 
