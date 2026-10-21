@@ -7,7 +7,7 @@
 
 ## Bài 1. Lọc log thủ công
 
-### Lệnh đã chạy
+###  Các dòng lệnh đã chạy 
 
 ```
 PS C:\Users\ACER\Documents\Downloads\starter-kit(1)\starter-kit\trung-tam-tieng-anh> Get-Content .\logs\access.log | Select-String "ERROR" > .\logs\error_report.txt
@@ -40,7 +40,7 @@ ERROR trong payment.log: 3
 
 ## Bài 3. Chạy script auto_warning (.ps1 hoặc .sh)
 
-### Lệnh chạy (Windows: nếu dùng Phụ lục 2 thì ghi cả 2 lệnh)
+### Dòng lệnh chạy (Windows: nếu dùng Phụ lục 2 thì ghi cả 2 lệnh)
 
 ```
 ./auto_warning.ps1
@@ -58,7 +58,7 @@ ERROR trong payment.log: 3
 
 ## Bài 4. Báo cáo tổng hợp
 
-### Các lệnh đã chạy
+### Các dòng lệnh đã chạy
 
 ```
 "=== TONG HOP ACCESS LOG ===" | set-content  -Path ./logs/tong_hop_ngay2.txt 
