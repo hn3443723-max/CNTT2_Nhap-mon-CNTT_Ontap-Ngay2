@@ -2,7 +2,7 @@
 
 - **Họ tên:Nguyễn Đức Hiếu**
 - **Lớp:CNTT02**
-- **Link repository:**
+- **Link repository:https://github.com/hn3443723-max/CNTT2_Nhap-mon-CNTT_Ontap-Ngay2.git**
 - **Hệ điều hành (Windows/macOS):Windows**
 
 ## Bài 1. Lọc log thủ công
